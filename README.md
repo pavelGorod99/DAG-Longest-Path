@@ -11,16 +11,16 @@ Solution 2:
 - We set the distance to the starting vertex (or the first vertex in topological order) to 0, as the longest path to itself is zero.
 - We then process each vertex in topological order. For each vertex, we update the distances to its adjacent vertices. If the distance to an adjacent vertex can be increased by taking the current vertex's path plus one, we update the distance to that vertex.
 
- Does the solution work for larger graphs?
+# Does the solution work for larger graphs?
 Answer: Yes
- Can you think of any optimizations?
+# Can you think of any optimizations?
 Answer: Solution 1 is based on DFS using recursion, but it may lead to stackoverflow if the graph is too large. 
 That's why Solution 2 is using topological sorting followed by dynamic programming approach to handle large graphs.
- What’s the computational complexity of your solution?
+# What’s the computational complexity of your solution?
 Both of the solutions are:
 Time complexity: O(V + E) 
 Space complexity: O(V + E)
- Are there any unusual cases that aren&#39;t handled?
+# Are there any unusual cases that aren&#39;t handled?
 - The graph is empty: HANDLED
 - The graph has vertices but no edges connecting them: HANDLED
 - The graph contains only one vertex with no edges: HANDLED
